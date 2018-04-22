@@ -29,7 +29,7 @@ def index():
 @route('/car_info')
 def car_info():
     nr = request.query.get('leit')
-    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='2609002180', passwd="mypassword", db='2609002180_vef2Verk11')
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='0905002950', passwd="asdqwe123", db='0905002950_vef2Vef11')
     c = conn.cursor()
 
     c.execute('SELECT * FROM bilar where skraningarnumer = %s', (nr))
@@ -62,7 +62,7 @@ def submit_record():
     co2 = int(co2)
     tyngd = int(tyngd)
 
-    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='2609002180', passwd="mypassword", db='2609002180_vef2Verk11')
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='0905002950', passwd="asdqwe123", db='0905002950_vef2Vef11')
     c = conn.cursor()
 
     c.execute('SELECT * FROM bilar')
@@ -85,7 +85,7 @@ def submit_record():
 
 @route('/db/del/<nr>')
 def del_from_db(nr):
-    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='2609002180', passwd="mypassword", db='2609002180_vef2Verk11')
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='0905002950', passwd="asdqwe123", db='0905002950_vef2Vef11')
     c = conn.cursor()
 
     c.execute('DELETE FROM bilar where skraningarnumer = %s', (nr))
@@ -98,7 +98,7 @@ def del_from_db(nr):
 
 @route('/db/update/<nr>')
 def update_db(nr):
-    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='2609002180', passwd="mypassword", db='2609002180_vef2Verk11')
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='0905002950', passwd="asdqwe123", db='0905002950_vef2Vef11')
     c = conn.cursor()
 
     c.execute('SELECT * FROM bilar where skraningarnumer = %s', (nr))
@@ -123,7 +123,7 @@ def submit_update():
     co2 = int(co2)
     tyngd = int(tyngd)
 
-    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='2609002180', passwd="mypassword", db='2609002180_vef2Verk11')
+    conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='0905002950', passwd="asdqwe123", db='0905002950_vef2Vef11')
     c = conn.cursor()
 
     c.execute("UPDATE bilar SET skraningarnumer='{}', tegund='{}', verksmidjunumer='{}', skraningardagur='{}', co2='{}', tyngd='{}', skodun='{}', stada='{}' where skraningarnumer = '{}'".format(skr_nr, tegund, vrk_nr, skr_dags, co2, tyngd, sko_dags, stada, skr_nr))
