@@ -3,7 +3,7 @@ from bottle import *
 import os
 
 
-#conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='2609002180', passwd="mypassword", db='2609002180_vef2Verk11')
+#conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='0905002950', passwd="asdqwe123", db='0905002950_vef2Vef11')
 
 #c = conn.cursor()
 
